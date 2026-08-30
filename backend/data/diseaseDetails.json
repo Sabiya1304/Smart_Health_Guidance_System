@@ -1,0 +1,393 @@
+[
+  {
+    "disease": "Flu",
+    "causes": [
+      "Viral infection",
+      "Weak immunity",
+      "Seasonal flu virus"
+    ],
+    "advice": [
+      "Stay hydrated",
+      "Take proper rest",
+      "Avoid cold exposure"
+    ],
+    "medicines": [
+      "Paracetamol",
+      "Antihistamines",
+      "Cough syrup"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Common Cold",
+     
+    "causes": [
+      "Viral infection",
+      "Weather changes",
+      "Weak immunity"
+    ],
+    "advice": [
+      "Drink warm fluids",
+      "Take sufficient rest",
+      "Use steam inhalation"
+    ],
+    "medicines": [
+      "Cold tablets",
+      "Antihistamines",
+      "Cough syrup"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Migraine",
+     
+    "causes": [
+      "Stress",
+      "Lack of sleep",
+      "Hormonal changes"
+    ],
+    "advice": [
+      "Rest in a dark room",
+      "Avoid loud noise",
+      "Manage stress"
+    ],
+    "medicines": [
+      "Pain relievers",
+      "Migraine tablets"
+    ],
+    "doctor": "Neurologist"
+  },
+
+  {
+    "disease": "Food Poisoning",
+     
+    "causes": [
+      "Contaminated food",
+      "Bacterial infection",
+      "Improper food hygiene"
+    ],
+    "advice": [
+      "Drink ORS",
+      "Avoid oily foods",
+      "Take rest"
+    ],
+    "medicines": [
+      "ORS",
+      "Antibiotics (if prescribed)",
+      "Anti-vomiting medicine"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Malaria",
+     
+    "causes": [
+      "Mosquito bites",
+      "Parasite infection"
+    ],
+    "advice": [
+      "Take proper medication",
+      "Drink fluids",
+      "Avoid mosquito exposure"
+    ],
+    "medicines": [
+      "Antimalarial medicines",
+      "Paracetamol"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Dengue",
+     
+    "causes": [
+      "Mosquito bite (Aedes mosquito)",
+      "Stagnant water areas"
+    ],
+    "advice": [
+      "Drink plenty of fluids",
+      "Take proper rest",
+      "Avoid mosquito exposure"
+    ],
+    "medicines": [
+      "Paracetamol (for fever)",
+      "Avoid NSAIDs like Ibuprofen"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Typhoid",
+     
+    "causes": [
+      "Contaminated food or water",
+      "Salmonella bacterial infection"
+    ],
+    "advice": [
+      "Drink clean water",
+      "Take complete antibiotic course",
+      "Take rest"
+    ],
+    "medicines": [
+      "Antibiotics",
+      "Paracetamol"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Acidity",
+     
+    "causes": [
+      "Spicy food",
+      "Irregular eating habits",
+      "Stress"
+    ],
+    "advice": [
+      "Avoid spicy food",
+      "Eat on time",
+      "Drink enough water"
+    ],
+    "medicines": [
+      "Antacids",
+      "Acid reducers"
+    ],
+    "doctor": "Gastroenterologist"
+  },
+
+  {
+    "disease": "Allergy",
+     
+    "causes": [
+      "Dust",
+      "Pollen",
+      "Food allergens"
+    ],
+    "advice": [
+      "Avoid allergens",
+      "Keep surroundings clean",
+      "Wear mask if needed"
+    ],
+    "medicines": [
+      "Antihistamines",
+      "Allergy tablets"
+    ],
+    "doctor": "Allergy Specialist"
+  },
+
+  {
+    "disease": "Dehydration",
+     
+    "causes": [
+      "Insufficient water intake",
+      "Excess sweating",
+      "Vomiting or diarrhea"
+    ],
+    "advice": [
+      "Drink ORS",
+      "Increase water intake",
+      "Avoid dehydration"
+    ],
+    "medicines": [
+      "ORS",
+      "Electrolyte solutions"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Asthma",
+     
+    "causes": [
+      "Dust allergy",
+      "Smoke exposure",
+      "Respiratory inflammation"
+    ],
+    "advice": [
+      "Avoid dust and smoke",
+      "Carry inhaler",
+      "Do breathing exercises"
+    ],
+    "medicines": [
+      "Inhalers",
+      "Bronchodilators"
+    ],
+    "doctor": "Pulmonologist"
+  },
+
+  {
+    "disease": "Bronchitis",
+     
+    "causes": [
+      "Viral infection",
+      "Smoking",
+      "Air pollution"
+    ],
+    "advice": [
+      "Avoid smoking",
+      "Take steam inhalation",
+      "Drink warm fluids"
+    ],
+    "medicines": [
+      "Cough medicine",
+      "Bronchodilators"
+    ],
+    "doctor": "Pulmonologist"
+  },
+
+  {
+    "disease": "Diabetes",
+     
+    "causes": [
+      "High blood sugar",
+      "Insulin imbalance",
+      "Genetics"
+    ],
+    "advice": [
+      "Avoid sugary foods",
+      "Exercise regularly",
+      "Monitor blood sugar"
+    ],
+    "medicines": [
+      "Insulin",
+      "Metformin"
+    ],
+    "doctor": "Endocrinologist"
+  },
+
+  {
+    "disease": "Hypertension",
+     
+    "causes": [
+      "Stress",
+      "High salt intake",
+      "Obesity"
+    ],
+    "advice": [
+      "Reduce salt intake",
+      "Exercise regularly",
+      "Manage stress"
+    ],
+    "medicines": [
+      "Blood pressure tablets"
+    ],
+    "doctor": "Cardiologist"
+  },
+
+  {
+    "disease": "Anemia",
+     
+    "causes": [
+      "Iron deficiency",
+      "Poor nutrition",
+      "Blood loss"
+    ],
+    "advice": [
+      "Eat iron-rich foods",
+      "Take supplements",
+      "Get proper sleep"
+    ],
+    "medicines": [
+      "Iron supplements",
+      "Vitamin tablets"
+    ],
+    "doctor": "General Physician"
+  },
+
+  {
+    "disease": "Appendicitis",
+     
+    "causes": [
+      "Appendix inflammation",
+      "Infection"
+    ],
+    "advice": [
+      "Seek emergency medical care",
+      "Avoid eating heavy foods"
+    ],
+    "medicines": [
+      "Pain relievers",
+      "Antibiotics"
+    ],
+    "doctor": "Surgeon"
+  },
+
+  {
+    "disease": "Urinary Tract Infection",
+     
+    "causes": [
+      "Bacterial infection",
+      "Poor hygiene"
+    ],
+    "advice": [
+      "Drink more water",
+      "Maintain hygiene",
+      "Avoid holding urine"
+    ],
+    "medicines": [
+      "Antibiotics",
+      "Pain relief medicine"
+    ],
+    "doctor": "Urologist"
+  },
+
+  {
+    "disease": "Kidney Stones",
+     
+    "causes": [
+      "Mineral buildup in kidneys",
+      "Dehydration"
+    ],
+    "advice": [
+      "Drink more water",
+      "Avoid excess salt",
+      "Seek medical consultation"
+    ],
+    "medicines": [
+      "Pain relievers",
+      "Stone dissolving medicines"
+    ],
+    "doctor": "Urologist"
+  },
+
+  {
+    "disease": "Depression",
+     
+    "causes": [
+      "Stress",
+      "Mental trauma",
+      "Chemical imbalance"
+    ],
+    "advice": [
+      "Talk to a counselor",
+      "Exercise regularly",
+      "Maintain healthy sleep"
+    ],
+    "medicines": [
+      "Antidepressants"
+    ],
+    "doctor": "Psychiatrist"
+  },
+
+  {
+    "disease": "Anxiety",
+     
+    "causes": [
+      "Stress",
+      "Fear",
+      "Overthinking"
+    ],
+    "advice": [
+      "Practice meditation",
+      "Take proper sleep",
+      "Reduce stress"
+    ],
+    "medicines": [
+      "Anti-anxiety medicines"
+    ],
+    "doctor": "Psychiatrist"
+  }
+]

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Health Result | Smart Health System</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/result.css">
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    
+
+    <div class="container nav-container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            🩺 SmartHealth
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="nav-links" aria-label="Main Navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dash.html" class="active">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        Profile
+                    </a>
+                </li>
+
+                <li>
+                    <button
+                        id="logoutBtn"
+                        class="logout-btn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- ACTION -->
+        <div class="nav-action">
+
+            <a href="symptoms.html"
+            class="btn primary-btn"
+            id="startCheckBtn">
+
+                Start Check
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ================= PROGRESS ================= -->
+<section class="result-progress">
+    <div class="container">
+
+        <div class="progress-wrapper">
+            <span class="step-text">Step 2 of 3 - AI Analysis</span>
+
+            <div class="progress-bar">
+                <div class="progress-fill step-2"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= MAIN ================= -->
+<main class="result-main">
+<div class="container">
+
+    <!-- ========== HERO RESULT CARD ========== -->
+    <section class="glass-card result-hero">
+
+        <div class="ai-badge">
+            🧠 AI Health Analysis Completed
+        </div>
+
+        <h2 class="result-title">Your Primary Condition</h2>
+
+        <h1 id="topDisease" class="top-disease">Loading...</h1>
+
+        <div class="result-stats">
+
+            <div class="stat-box">
+                <p class="label">Confidence</p>
+                <p id="topPercentage" class="value">--%</p>
+            </div>
+
+            <div class="stat-box">
+                <p class="label">Severity</p>
+                <span id="severityBadge" class="severity-badge">--</span>
+            </div>
+
+        </div>
+
+        <p class="warning-text">
+            ⚠️ This is AI-generated analysis. Not a medical diagnosis.
+        </p>
+
+    </section>
+
+    <!-- ========== ANALYTICS SECTION ========== -->
+    <section class="result-grid">
+
+        <!-- CHART -->
+        <div class="glass-card chart-card">
+
+            <h3>Symptom Analysis</h3>
+
+            <div class="chart-container">
+                <canvas id="resultChart"></canvas>
+            </div>
+
+        </div>
+
+        <!-- INSIGHTS -->
+        <div class="glass-card insight-card">
+
+            <h3>AI Insights</h3>
+
+            <ul>
+                <li>Most matching symptoms detected</li>
+                <li>Pattern matches common disease profiles</li>
+                <li>Further confirmation required</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- ========== DISEASE COMPARISON ========== -->
+    <section class="glass-card">
+
+        <h3 class="section-title">Possible Conditions</h3>
+
+        <div class="disease-grid" id="diseaseGrid">
+            <!-- JS will inject cards -->
+        </div>
+
+    </section>
+
+    <!-- ========== ACTION SECTION ========== -->
+    <section class="result-actions">
+
+        <button class="save-btn" onclick="goBack()">← Back</button>
+
+        <button class="save-btn primary" id="confirmBtn">
+            Continue AI Diagnosis →
+        </button>
+
+        <button class="save-btn" onclick="goHistory()">
+            View History
+        </button>
+
+    </section>
+
+</div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Smart Health System | MCA Project</p>
+</footer>
+
+<script src="js/result.js"></script>
+<script src="./js/logout.js"></script>
+
+</body>
+</html>

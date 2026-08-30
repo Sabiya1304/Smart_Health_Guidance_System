@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Smart Health System</title>
+
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <span class="brand-mark">+</span>
+            <h2>🩺 SmartHealth</h2>
+        </div>
+
+        <nav class="side-nav" aria-label="Profile Navigation">
+            <a href="index.html">Home</a>
+            <a href="dash.html">Dashboard</a>
+            <a href="symptoms.html">Start Checkup</a>
+            <a href="dash.html#historySection">Previous Checkups</a>
+            <a class="active" href="profile.html">Profile</a>
+        </nav>
+
+        <button class="logout" type="button">Logout</button>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Account</p>
+                <h1>My Profile</h1>
+            </div>
+
+            <div class="user">
+                <span class="user-avatar" id="topUserInitials">U</span>
+                <span id="topUserName">User</span>
+            </div>
+        </header>
+
+        <section class="profile-hero">
+            <div class="profile-identity">
+                <div class="avatar" id="profileInitials">U</div>
+
+                <div class="profile-title">
+                    <span class="tag">Patient Profile</span>
+                    <h2 id="profileName">User</h2>
+                    <p id="profileEmail">Email: Not Set</p>
+                    <p id="profilePhone">Phone: Not Set</p>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button id="editProfileBtn" type="button">Edit Profile</button>
+                <button id="changePasswordBtn" class="secondary-action" type="button">Change Password</button>
+            </div>
+        </section>
+
+        <section class="summary-grid">
+            <article class="summary-card">
+                <span>Member Since</span>
+                <strong id="memberSince">Not Set</strong>
+            </article>
+
+            <article class="summary-card">
+                <span>Patient ID</span>
+                <strong id="patientId">Not Set</strong>
+            </article>
+
+            <article class="summary-card">
+                <span>Blood Group</span>
+                <strong id="bloodGroup">Not Set</strong>
+            </article>
+
+            <article class="summary-card">
+                <span>Last Checkup</span>
+                <strong id="lastCheckup">Not Set</strong>
+            </article>
+        </section>
+
+        <section class="content-grid">
+            <article class="card">
+                <div class="card-header">
+                    <h3>Personal Information</h3>
+                    <button class="text-action" type="button" data-open-edit>Edit</button>
+                </div>
+
+                <div class="info-list">
+                    <div><span>Full Name</span><strong id="infoName">Not Set</strong></div>
+                    <div><span>Email</span><strong id="infoEmail">Not Set</strong></div>
+                    <div><span>Phone</span><strong id="infoPhone">Not Set</strong></div>
+                    <div><span>Age</span><strong id="infoAge">Not Set</strong></div>
+                    <div><span>Gender</span><strong id="infoGender">Not Set</strong></div>
+                    <div><span>Address</span><strong id="infoAddress">Not Set</strong></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <h3>Health Details</h3>
+                    <button class="text-action" type="button" data-open-edit>Edit</button>
+                </div>
+
+                <div class="info-list">
+                    <div><span>Height</span><strong id="infoHeight">Not Set</strong></div>
+                    <div><span>Weight</span><strong id="infoWeight">Not Set</strong></div>
+                    <div><span>Blood Group</span><strong id="infoBloodGroup">Not Set</strong></div>
+                    <div><span>Emergency Contact</span><strong id="infoEmergencyContact">Not Set</strong></div>
+                    <div><span>Profile Status</span><strong id="profileStatus">Incomplete</strong></div>
+                    <div><span>Recommended Action</span><strong id="recommendedAction">Complete your profile</strong></div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="panel-overlay" id="panelOverlay" hidden></div>
+
+    <aside class="edit-panel" id="editPanel" aria-hidden="true">
+        <div class="panel-header">
+            <div>
+                <p class="eyebrow">Profile</p>
+                <h2>Edit Details</h2>
+            </div>
+            <button class="close-panel" id="closePanelBtn" type="button">&times;</button>
+        </div>
+
+        <form id="profileForm" class="profile-form">
+            <label>
+                Full Name
+                <input id="editName" name="name" type="text" placeholder="Enter full name" required>
+            </label>
+
+            <label>
+                Phone
+                <input id="editPhone" name="phone" type="tel" placeholder="Enter phone number">
+            </label>
+
+            <label>
+                Age
+                <input id="editAge" name="age" type="number" min="1" max="120" placeholder="Enter age">
+            </label>
+
+            <label>
+                Gender
+                <select id="editGender" name="gender">
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+
+            <label>
+                Blood Group
+                <input id="editBloodGroup" name="bloodGroup" type="text" placeholder="Example: O+">
+            </label>
+
+            <label>
+                Emergency Contact
+                <input id="editEmergencyContact" name="emergencyContact" type="tel" placeholder="Emergency contact number">
+            </label>
+
+            <label class="full-field">
+                Address
+                <textarea id="editAddress" name="address" rows="3" placeholder="Enter address"></textarea>
+            </label>
+
+            <label>
+                Height
+                <input id="editHeight" name="height" type="text" placeholder="Example: 165 cm">
+            </label>
+
+            <label>
+                Weight
+                <input id="editWeight" name="weight" type="text" placeholder="Example: 58 kg">
+            </label>
+
+            <div class="panel-actions">
+                <button class="secondary-action" id="cancelEditBtn" type="button">Cancel</button>
+                <button id="saveProfileBtn" type="submit">Save Profile</button>
+            </div>
+        </form>
+    </aside>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

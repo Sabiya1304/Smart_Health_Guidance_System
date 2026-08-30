@@ -1,0 +1,322 @@
+/* ================= SAAS AUTH MODAL ================= */
+
+.auth-modal {
+    width: 90%; 
+    max-width: 420px; 
+    background: rgba(241, 239, 239, 0.95); /* Light gray background goes HERE */
+    color: #333333; /* Dark text goes HERE */
+    border-radius: 16px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.auth-close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: rgb(7, 0, 0);
+    cursor: pointer;
+}
+
+.auth-header h2 {
+    color: #111;
+}
+
+.auth-header p {
+    color: #666;
+}
+
+.auth-tabs {
+    display: flex;
+    margin: 15px 0;
+    gap: 10px;
+    font-weight: bold;
+
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #ffffff; /* Changed to white */
+    color: rgb(15, 15, 15);
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc; /* Added a subtle border so you can see the edges */
+}
+
+.auth-tab.active {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+.form-slider {
+    position: relative;
+}
+
+.auth-form {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 40px;
+}
+
+.auth-form.active-form {
+    display: flex !important;
+}
+
+.auth-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 100%; /* Add this to ensure it listens to the padding we added above */
+    box-sizing: border-box; /* Keeps the padding from making the input wider */
+}
+
+.auth-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #0d6efd;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.password-box {
+    position: relative;
+}
+
+.toggle-pass {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* TOAST */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    display: none;
+}
+
+/* Groups the label and input together neatly */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Forces the label to sit on the left */
+}
+
+/* Styles the actual text of the label */
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333; /* Dark gray for readability */
+    margin-bottom: 6px; /* Adds a tiny space between the label and the input box */
+}
+
+/* Optional: Makes the required asterisk red */
+.input-group .required {
+    color: #e63946; 
+}
+/*Login form 
+* LOGIN FORM SAME LOOK AS REGISTER */
+
+#loginForm{
+    max-width: 100%;
+}
+
+#loginForm .form-group{
+    margin-bottom:12px;
+}
+
+#loginForm input{
+    height:38px;
+    width:100%;
+}
+
+#loginForm .auth-btn{
+    margin-top:8px;
+}
+
+/* BUTTONS */
+.btn-outline,
+.btn-primary,
+.auth-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/* ==========================================
+   AUTH MODAL 
+========================================== */
+
+.auth-modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:10px;
+}
+
+.auth-modal-overlay.active{
+    display:flex;
+}
+
+.auth-modal{
+    position:relative;
+    width:100%;
+    max-width:400px; /* much smaller */
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    overflow:hidden;
+}
+
+/* CLOSE BUTTON */
+
+.auth-close-btn{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius:50%;
+    background:#f1f5f9;
+    font-size:18px;
+    cursor:pointer;
+    z-index:10;
+}
+
+/* HEADER */
+
+.auth-header{
+    text-align:center;
+    padding:18px 18px 8px;
+}
+
+.auth-header h2{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:3px;
+}
+
+.auth-header p{
+    font-size:12px;
+    color:#64748b;
+}
+
+/* TABS */
+
+.auth-tabs{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    padding:8px 15px 12px;
+}
+
+.auth-tab{
+    border:none;
+    background:#eef2ff;
+    color:#475569;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:500;
+}
+
+.auth-tab.active{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* FORM AREA */
+.auth-form{
+    padding:0;
+}
+
+/* FORMS */
+
+.auth-form{
+    display:none;
+}
+
+.auth-form.active-form{
+    display:block;
+}
+
+/* INPUTS */
+
+.auth-form input,
+.auth-form select{
+    width:100%;
+    height:38px;
+    border:1px solid #dbe2ea;
+    border-radius:8px;
+    padding:0 10px;
+    font-size:13px;
+}
+
+.auth-form input:focus,
+.auth-form select:focus{
+    outline:none;
+    border-color:#2563eb;
+}
+
+/* PASSWORD */
+
+.password-box{
+    position:relative;
+}
+
+.toggle-pass{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:14px;
+}
+
+/* BUTTON */
+
+.auth-btn{
+    width:100%;
+    height:40px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:5px;
+}
+
+.auth-btn:hover{
+    background:#1d4ed8;
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "disease": "Flu",
+    "primaryQuestions": [
+      "Do you have fever above 100°F?",
+      "Are you experiencing body pain?"
+    ],
+    "deepQuestions": [
+      "Are you feeling chills with fever?",
+      "Do you feel extreme fatigue even after rest?",
+      "Is your cough dry or productive?"
+    ],
+    "redFlagQuestions": [
+      "Do you have difficulty breathing?"
+    ]
+  },
+
+  {
+    "disease": "Common Cold",
+    "primaryQuestions": [
+      "Do you have runny nose?",
+      "Are you sneezing frequently?"
+    ],
+    "deepQuestions": [
+      "Is your throat itchy or mildly sore?",
+      "Do symptoms worsen in cold weather?",
+      "Is fever absent or very mild?"
+    ],
+    "redFlagQuestions": [
+      "Do you have high fever above 102°F?"
+    ]
+  },
+
+  {
+    "disease": "Migraine",
+    "primaryQuestions": [
+      "Do you have severe headache on one side?",
+      "Do you feel nausea during headache?"
+    ],
+    "deepQuestions": [
+      "Does light or sound increase your headache?",
+      "Do you see flashing lights before headache starts?",
+      "Do headaches last more than 4 hours?"
+    ],
+    "redFlagQuestions": [
+      "Do you have sudden worst headache of your life?"
+    ]
+  },
+
+  {
+    "disease": "Food Poisoning",
+    "primaryQuestions": [
+      "Do you have vomiting?",
+      "Do you have stomach pain after eating?"
+    ],
+    "deepQuestions": [
+      "Did symptoms start after eating outside food?",
+      "Are you experiencing diarrhea frequently?",
+      "Do you feel weakness after vomiting?"
+    ],
+    "redFlagQuestions": [
+      "Is there blood in vomit or stool?"
+    ]
+  },
+
+  {
+    "disease": "Malaria",
+    "primaryQuestions": [
+      "Do you have high fever with chills?",
+      "Do you experience sweating after fever?"
+    ],
+    "deepQuestions": [
+      "Does fever come in cycles every 2 to 3 days?",
+      "Do you feel severe headache with fever?",
+      "Have you been in mosquito-prone areas recently?"
+    ],
+    "redFlagQuestions": [
+      "Do you have confusion or seizures?"
+    ]
+  },
+
+  {
+    "disease": "Dengue",
+    "primaryQuestions": [
+      "Do you have high fever?",
+      "Do you feel joint pain?"
+    ],
+    "deepQuestions": [
+      "Do you have pain behind the eyes?",
+      "Have you noticed skin rash or red spots?",
+      "Do you feel severe body weakness?"
+    ],
+    "redFlagQuestions": [
+      "Do you have bleeding gums or nose bleeding?",
+      "Are you vomiting repeatedly?"
+    ]
+  },
+
+  {
+    "disease": "Typhoid",
+    "primaryQuestions": [
+      "Do you have continuous fever?",
+      "Do you feel loss of appetite?"
+    ],
+    "deepQuestions": [
+      "Is fever increasing gradually every day?",
+      "Do you feel stomach discomfort after eating?",
+      "Do you feel extreme weakness?"
+    ],
+    "redFlagQuestions": [
+      "Do you have severe abdominal pain?"
+    ]
+  },
+
+  {
+    "disease": "Acidity",
+    "primaryQuestions": [
+      "Do you feel burning in chest?",
+      "Do you experience bloating?"
+    ],
+    "deepQuestions": [
+      "Does burning increase after eating spicy food?",
+      "Do you feel relief after burping?",
+      "Do symptoms worsen at night?"
+    ],
+    "redFlagQuestions": [
+      "Do you have chest pain spreading to arm?"
+    ]
+  },
+
+  {
+    "disease": "Allergy",
+    "primaryQuestions": [
+      "Do you have itchy eyes?",
+      "Do you sneeze frequently?"
+    ],
+    "deepQuestions": [
+      "Do symptoms worsen after dust exposure?",
+      "Do you get skin rashes?",
+      "Do symptoms occur during seasonal changes?"
+    ],
+    "redFlagQuestions": [
+      "Do you experience swelling or breathing difficulty?"
+    ]
+  },
+
+  {
+    "disease": "Dehydration",
+    "primaryQuestions": [
+      "Do you feel excessive thirst?",
+      "Do you have dry mouth?"
+    ],
+    "deepQuestions": [
+      "Do you feel dizzy while standing?",
+      "Do you urinate less frequently?",
+      "Do you feel weakness during the day?"
+    ],
+    "redFlagQuestions": [
+      "Have you fainted recently?"
+    ]
+  },
+
+  {
+    "disease": "Asthma",
+    "primaryQuestions": [
+      "Do you have shortness of breath?",
+      "Do you have wheezing sound while breathing?"
+    ],
+    "deepQuestions": [
+      "Do symptoms worsen at night or early morning?",
+      "Do you feel chest tightness during exercise?",
+      "Are symptoms triggered by dust or smoke?"
+    ],
+    "redFlagQuestions": [
+      "Are you unable to speak due to breathlessness?"
+    ]
+  },
+
+  {
+    "disease": "Bronchitis",
+    "primaryQuestions": [
+      "Do you have persistent cough?",
+      "Are you coughing mucus frequently?"
+    ],
+    "deepQuestions": [
+      "Do you feel chest discomfort while coughing?",
+      "Do symptoms worsen in cold air?",
+      "Do you feel tired after coughing?"
+    ],
+    "redFlagQuestions": [
+      "Do you have severe breathing difficulty?"
+    ]
+  },
+
+  {
+    "disease": "Diabetes",
+    "primaryQuestions": [
+      "Do you feel frequent thirst?",
+      "Do you urinate frequently?"
+    ],
+    "deepQuestions": [
+      "Do you feel fatigue even after eating?",
+      "Have you experienced sudden weight loss?",
+      "Do you have blurred vision?"
+    ],
+    "redFlagQuestions": [
+      "Do you have slow healing wounds?"
+    ]
+  },
+
+  {
+    "disease": "Hypertension",
+    "primaryQuestions": [
+      "Do you have frequent headaches?",
+      "Do you feel dizziness?"
+    ],
+    "deepQuestions": [
+      "Do you feel chest tightness sometimes?",
+      "Do you feel stress or anxiety often?",
+      "Do symptoms increase during mental pressure?"
+    ],
+    "redFlagQuestions": [
+      "Do you have severe chest pain?"
+    ]
+  },
+
+  {
+    "disease": "Anemia",
+    "primaryQuestions": [
+      "Do you feel fatigue most of the time?",
+      "Do you feel dizziness?"
+    ],
+    "deepQuestions": [
+      "Do you notice pale skin?",
+      "Do you feel breathless during small activity?",
+      "Do you feel weakness after waking up?"
+    ],
+    "redFlagQuestions": [
+      "Do you faint frequently?"
+    ]
+  },
+
+  {
+    "disease": "Appendicitis",
+    "primaryQuestions": [
+      "Do you feel pain in lower right abdomen?",
+      "Do you feel nausea?"
+    ],
+    "deepQuestions": [
+      "Does pain increase while walking?",
+      "Do you have mild fever?",
+      "Do you feel loss of appetite?"
+    ],
+    "redFlagQuestions": [
+      "Is abdominal pain becoming severe rapidly?"
+    ]
+  },
+
+  {
+    "disease": "Urinary Tract Infection",
+    "primaryQuestions": [
+      "Do you feel burning while urinating?",
+      "Do you urinate frequently?"
+    ],
+    "deepQuestions": [
+      "Do you feel pelvic pain?",
+      "Is urine cloudy or strong smelling?",
+      "Do you have mild fever?"
+    ],
+    "redFlagQuestions": [
+      "Do you see blood in urine?"
+    ]
+  },
+
+  {
+    "disease": "Kidney Stones",
+    "primaryQuestions": [
+      "Do you have severe back pain?",
+      "Do you feel pain during urination?"
+    ],
+    "deepQuestions": [
+      "Do you feel nausea with pain?",
+      "Do you notice blood in urine?",
+      "Does pain come in waves?"
+    ],
+    "redFlagQuestions": [
+      "Is pain unbearable or spreading to groin area?"
+    ]
+  },
+
+  {
+    "disease": "Depression",
+    "primaryQuestions": [
+      "Do you feel sadness most of the time?",
+      "Do you lose interest in activities?"
+    ],
+    "deepQuestions": [
+      "Do you have sleep problems?",
+      "Do you feel low energy daily?",
+      "Do you feel hopeless sometimes?"
+    ],
+    "redFlagQuestions": [
+      "Do you have thoughts of self-harm?"
+    ]
+  },
+
+  {
+    "disease": "Anxiety",
+    "primaryQuestions": [
+      "Do you feel nervous frequently?",
+      "Do you experience rapid heartbeat?"
+    ],
+    "deepQuestions": [
+      "Do you sweat excessively during stress?",
+      "Do you feel restless without reason?",
+      "Do you overthink daily situations?"
+    ],
+    "redFlagQuestions": [
+      "Do you experience panic attacks?"
+    ]
+  }
+]

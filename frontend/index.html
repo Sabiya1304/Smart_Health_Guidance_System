@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Health</title>
+
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/auth-modal.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                ❤
+            </div>
+
+            <div>
+                <h2>Smart<span>Health</span></h2>
+                <p>AI Powered Health Assistant</p>
+            </div>
+
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="#" class="active">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#features">Features</a>
+            <a href="dash.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+
+        </nav>
+
+        <div class="nav-buttons">
+
+            <a href="javascript:void(0)"
+                id="loginNavItem"
+                class="btn-outline open-login-modal">
+                Login
+            </a>
+
+            <a href="javascript:void(0)"
+                id="registerNavItem"
+                class="btn-primary open-register-modal">
+                Register
+            </a>
+
+            <a href="javascript:void(0)"
+                id="logoutBtn"
+                class="btn-outline"
+                style="display:none;">
+                Logout
+            </a>
+
+            <a href="symptoms.html" class="btn-primary start-btn">
+                Start Checkup →
+            </a>
+
+        </div>
+
+</div>
+
+    </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="container hero-container">
+
+        <!-- LEFT -->
+
+        <div class="hero-left">
+
+            <div class="hero-badge">
+                ✨ AI POWERED HEALTH ASSISTANT
+            </div>
+
+            <h1>
+                Your Health,<br>
+                <span>Our Priority.</span>
+            </h1>
+
+            <p>
+                Smartly analyze your symptoms, predict possible
+                conditions and get guidance with severity level
+                and doctor recommendations.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="symptoms.html" class="btn-primary big-btn">
+                    Start Symptom Check →
+                </a>
+
+                <a href="dash.html" class="btn-outline big-btn">
+                    📊 Explore Dashboard
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <div class="feature-mini">
+                    <div class="icon">🛡️</div>
+
+                    <div>
+                        <h4>Secure & Private</h4>
+                        <p>Your data is safe</p>
+                    </div>
+                </div>
+
+                <div class="feature-mini">
+                    <div class="icon">⚡</div>
+
+                    <div>
+                        <h4>Fast & Accurate</h4>
+                        <p>Results in seconds</p>
+                    </div>
+                </div>
+
+                <div class="feature-mini">
+                    <div class="icon">👥</div>
+
+                    <div>
+                        <h4>Trusted by 500+</h4>
+                        <p>Happy users</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-right">
+
+            <div class="dashboard-card">
+
+                <h3>Health Overview</h3>
+
+                <div class="overview-grid">
+
+                    <div class="overview-box">
+                        <small>Overall Health</small>
+                        <h4 id="overallHealth">--</h4>
+                    </div>
+
+                    <div class="overview-box">
+                        <small>Risk Level</small>
+                        <h4 id="riskLevel">--</h4>
+                    </div>
+
+                    <div class="overview-box">
+                        <small>Health Score</small>
+                        <h4 id="healthScore">--</h4>
+                    </div>
+
+                </div>
+
+                    <div
+                        class="recent-checkup"
+                        id="recentCheckups">
+                    </div>
+
+            </div>
+
+            <img
+            src="assets/images/doctor.png"
+            class="doctor-img"
+            alt="Doctor">
+
+            <div class="health-badge">
+
+                <div class="plus">+</div>
+
+                <h4>Your Health</h4>
+                <p>in Safe Hands</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="stats-bar">
+
+            <div class="stat-item">
+
+                <div class="circle blue">
+                    👥
+                </div>
+
+                <div>
+                    <h3 id="totalUsers">0</h3>
+                    <p>Registered Users</p>
+                </div>
+
+            </div>
+
+            <div class="stat-item">
+
+                <div class="circle green">
+                    📋
+                </div>
+
+                <div>
+                    <h3 id="totalCheckups">0</h3>                    <p>Health Checks</p>
+                </div>
+
+            </div>
+
+            <div class="stat-item">
+
+                <div class="circle purple">
+                    📈
+                </div>
+
+                <div>
+                    <h3 id="accuracyRate">0%</h3>
+                    <p>Accuracy Rate</p>
+                </div>
+
+            </div>
+
+            <div class="stat-item">
+
+                <div class="circle orange">
+                    🎧
+                </div>
+
+                <div>
+                    <h3 id="supportStatus">--</h3>
+                    <p>Support Available</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features-section" id="features">
+
+    <div class="container">
+
+        <span class="section-badge">
+            OUR FEATURES
+        </span>
+
+        <h2 class="section-title">
+            Everything You Need for Better Health
+        </h2>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon blue">
+                    🩺
+                </div>
+
+                <div>
+                    <h3>Symptom Analysis</h3>
+
+                    <p>
+                        Select your symptoms from an easy checklist
+                        and get AI powered analysis.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon green">
+                    🧠
+                </div>
+
+                <div>
+                    <h3>Disease Prediction</h3>
+
+                    <p>
+                        Get possible disease prediction with
+                        severity level.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon purple">
+                    📄
+                </div>
+
+                <div>
+                    <h3>Health History</h3>
+
+                    <p>
+                        Track previous checkups and monitor
+                        your progress.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon orange">
+                    👨‍⚕️
+                </div>
+
+                <div>
+                    <h3>Doctor Guidance</h3>
+
+                    <p>
+                        Receive specialist recommendations
+                        and medical advice.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="timeline-section" id="how-it-works">
+
+    <div class="container">
+
+        <span class="section-badge">HOW IT WORKS</span>
+        <h2 class="section-title">Simple Steps to Better Health</h2>
+
+        <div class="timeline-grid">
+
+            <div class="timeline-card">
+                <span>1</span> <div class="timeline-icon blue">📋</div>
+                <h3>Select Symptoms</h3>
+                <p>Choose symptoms from our comprehensive list.</p>
+            </div>
+
+            <div class="timeline-card">
+                <span>2</span>
+                <div class="timeline-icon green">🧠</div>
+                <h3>AI Analysis</h3>
+                <p>Advanced algorithms analyze symptoms.</p>
+            </div>
+
+            <div class="timeline-card">
+                <span>3</span>
+                <div class="timeline-icon purple">📄</div>
+                <h3>Get Prediction</h3>
+                <p>Receive disease prediction and severity.</p>
+            </div>
+
+            <div class="timeline-card">
+                <span>4</span>
+                <div class="timeline-icon orange">👨‍⚕️</div>
+                <h3>Follow Advice</h3>
+                <p>View recommendations and guidance.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CTA ================= -->
+
+<section class="cta-banner">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Your Health is Our Mission
+                </h2>
+
+                <p>
+                    This system is for informational purposes only and
+                    does not replace professional medical advice.
+                </p>
+
+            </div>
+
+            <a href="#" class="cta-btn">
+                Learn More →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+        © 2026 Smart Health System | MCA Project
+    </div>
+
+</footer>
+
+<!-- AUTH MODAL -->
+<div class="auth-modal-overlay" id="authModalOverlay">
+
+    <div class="auth-modal">
+
+        <!-- CLOSE -->
+        <button class="auth-close-btn" id="closeAuthModal">&times;</button>
+
+        <!-- HEADER -->
+        <div class="auth-header">
+            <h2 id="authTitle">Welcome Back</h2>
+            <p id="authSubtitle">Login to continue your journey</p>
+        </div>
+
+        <!-- TOGGLE TABS -->
+        <div class="auth-tabs">
+            <button class="auth-tab active" id="loginTabBtn">Login</button>
+            <button class="auth-tab" id="registerTabBtn">Register</button>
+        </div>
+
+        <!-- FORM CONTAINER (SLIDING STYLE) -->
+        <div class="form-slider">
+
+            <!-- LOGIN -->
+            <form id="loginForm" class="auth-form active-form">
+
+                <div class="form-group">
+                    <input type="email" id="loginEmail" placeholder="Email address" required>
+                </div>
+
+                <div class="form-group password-box">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <span class="toggle-pass" data-target="loginPassword">👁</span>
+                </div>
+
+                <button type="submit" class="auth-btn">Login</button>
+
+            </form>
+
+            <!-- ================= REGISTER FORM ================= -->
+            <form id="registerForm" class="auth-form">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <input type="text" id="registerName" placeholder="Full Name" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="registerEmail" placeholder="Email Address" required>
+                        <small class="error"></small>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group password-box">
+                        <input type="password" id="registerPassword" placeholder="Password" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group password-box">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <small class="error"></small>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <input type="text" id="registerPhone" placeholder="Phone Number" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" id="registerAge" placeholder="Age" required>
+                        <small class="error"></small>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <select id="registerGender" required>
+                            <option value="">Select Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                        <small class="error"></small>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="auth-btn">Create Account</button>
+
+                <p class="login-link">
+                    Already have an account?
+                    <a href="#" id="switchToLogin">Login</a>
+                </p>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src ="js/auth-modal.js"></script>
+<script src ="js/auth.js"></script>
+<script src ="js/index.js"></script>
+</body>
+</html>

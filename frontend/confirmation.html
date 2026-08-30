@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Disease Confirmation | Smart Health System</title>
+
+    <!-- ================= GOOGLE FONT ================= -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ================= FONT AWESOME ================= -->
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <!-- ================= GLOBAL CSS ================= -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- ================= PAGE CSS ================= -->
+    <link rel="stylesheet" href="css/confirmation.css">
+
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- NAVBAR -->
+    <!-- ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                Smart Health System
+            </div>
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="symptoms.html">Symptoms</a>
+
+                <a href="result.html">Results</a>
+
+                <a href="confirmation.html" class="active">
+                    Confirmation
+                </a>
+
+                <a href="dash.html">Dashboard</a>
+
+                <a href="profile.html">Profile</a>
+
+                <a href="#" id="logoutBtn">Logout</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- HERO SECTION -->
+    <!-- ===================================================== -->
+
+    <section class="confirmation-hero">
+
+        <!-- Decorative Glow -->
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+
+        <div class="container hero-content">
+
+            <!-- LEFT -->
+            <div class="hero-left">
+
+                <div class="ai-badge">
+
+                    <span class="pulse-dot"></span>
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    AI Verification Active
+
+                </div>
+
+                <h1>
+                    Disease Confirmation Engine
+                </h1>
+
+                <p>
+                    AI-powered clinical verification system analyzing
+                    symptoms, confidence levels, and follow-up responses
+                    to generate accurate healthcare insights.
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-right">
+
+                <div class="hero-stats">
+
+                    <div class="hero-stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+
+                        <div>
+                            <h3>AI Diagnostic</h3>
+                            <p>Real-time analysis</p>
+                        </div>
+
+                    </div>
+
+                    <div class="hero-stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <div>
+                            <h3>Smart Verification</h3>
+                            <p>Clinical confidence engine</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PROGRESS TRACKER -->
+    <!-- ===================================================== -->
+
+    <section class="progress-wrapper container">
+
+        <div class="progress-card">
+
+            <div class="progress-header">
+
+                <div>
+
+                    <h3>Diagnosis Progress</h3>
+
+                    <p>
+                        AI verification workflow status
+                    </p>
+
+                </div>
+
+                <div class="progress-percent">
+
+                    <span id="mainProgressText">
+                        0%
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- STEP INDICATORS -->
+            <div class="step-indicators">
+
+                <div class="step-item active">
+
+                    <div class="step-circle">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+
+                    <span>Symptom Analysis</span>
+
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step-item active">
+
+                    <div class="step-circle">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <span>AI Verification</span>
+
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step-item">
+
+                    <div class="step-circle">
+                        <i class="fa-solid fa-file-waveform"></i>
+                    </div>
+
+                    <span>Final Diagnosis</span>
+
+                </div>
+
+            </div>
+
+            <!-- MAIN PROGRESS -->
+            <div class="progress-track">
+
+                <div
+                    class="progress-fill"
+                    id="mainProgressFill">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- MAIN LAYOUT -->
+    <!-- ===================================================== -->
+
+    <main class="confirmation-layout container">
+
+        <!-- ================================================= -->
+        <!-- LEFT SECTION -->
+        <!-- ================================================= -->
+
+        <section class="left-panel">
+
+            <!-- ============================================= -->
+            <!-- TOP DISEASES -->
+            <!-- ============================================= -->
+
+            <div class="glass-card">
+
+                <div class="card-top">
+
+                    <div>
+
+                        <h2>
+                            Predicted Conditions
+                        </h2>
+
+                        <p>
+                            AI-generated disease probability ranking
+                        </p>
+
+                    </div>
+
+                    <div class="mini-badge">
+                        Live Confidence
+                    </div>
+
+                </div>
+
+                <div
+                    class="disease-grid"
+                    id="diseaseContainer">
+
+                    <!-- JS -->
+
+                </div>
+
+            </div>
+
+            <!-- ============================================= -->
+            <!-- QUESTION ENGINE -->
+            <!-- ============================================= -->
+
+            <div class="glass-card question-engine">
+
+                <!-- HEADER -->
+                <div class="engine-header">
+
+                    <div class="engine-avatar">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            AI Confirmation Engine
+                        </h2>
+
+                        <p class="ai-status">
+
+                            <span class="status-dot"></span>
+
+                            Cross-verifying symptoms...
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- QUESTION META -->
+                <div class="question-meta">
+
+                    <div class="question-count">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <span id="questionCounter">
+                            Question 1 / 6
+                        </span>
+
+                    </div>
+
+                    <div class="verification-status">
+
+                        AI analyzing response patterns
+
+                    </div>
+
+                </div>
+
+                <!-- QUESTION -->
+                <div
+                    class="question-text"
+                    id="questionText">
+
+                    Loading clinical question...
+
+                </div>
+
+                <!-- ANSWERS -->
+                <div
+                    class="answer-grid"
+                    id="answerGrid">
+
+                    <!-- JS -->
+
+                    <div class="answer-card">
+
+                        <div class="answer-icon yes">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="answer-content">
+
+                            <h4>Yes</h4>
+
+                            <p>
+                                Frequently experienced
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="answer-card">
+
+                        <div class="answer-icon maybe">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+
+                        <div class="answer-content">
+
+                            <h4>Maybe</h4>
+
+                            <p>
+                                Unsure or occasional
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="answer-card">
+
+                        <div class="answer-icon sometimes">
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+
+                        <div class="answer-content">
+
+                            <h4>Sometimes</h4>
+
+                            <p>
+                                Mild occurrence
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="answer-card">
+
+                        <div class="answer-icon no">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div class="answer-content">
+
+                            <h4>No</h4>
+
+                            <p>
+                                Not experienced
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="answer-card">
+
+                        <div class="answer-icon never">
+                            <i class="fa-solid fa-ban"></i>
+                        </div>
+
+                        <div class="answer-content">
+
+                            <h4>Never</h4>
+
+                            <p>
+                                Completely absent
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================================================= -->
+        <!-- RIGHT PANEL -->
+        <!-- ================================================= -->
+
+        <aside class="right-panel">
+
+            <!-- ============================================= -->
+            <!-- AI INSIGHTS -->
+            <!-- ============================================= -->
+
+            <!--<div class="glass-card insights-card">
+
+                <div class="card-top">
+
+                    <div>
+
+                        <h2>
+                            AI Insights
+                        </h2>
+
+                        <p>
+                            Live clinical verification
+                        </p>
+
+                    </div>
+
+                    <div class="insight-pulse"></div>
+
+                </div>
+
+                <div class="insight-list">
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i class="fa-solid fa-dna"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Symptom Matching
+                            </h4>
+
+                            <p>
+                                AI correlating disease patterns
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Confidence Tracking
+                            </h4>
+
+                            <p>
+                                Real-time probability updates
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="insight-item">
+
+                        <div class="insight-icon">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Clinical Verification
+                            </h4>
+
+                            <p>
+                                Cross-validating medical indicators
+                            </p>
+
+                        </div>
+
+                    </div> -->
+
+                </div>
+
+            </div>
+
+            <!-- ============================================= -->
+            <!-- FINAL DIAGNOSIS -->
+            <!-- ============================================= -->
+
+            <div class="glass-card diagnosis-card">
+
+                <div class="card-top">
+
+                    <div>
+
+                        <h2>
+                            Final Diagnosis
+                        </h2>
+
+                        <p>
+                            AI-generated medical conclusion
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SKELETON -->
+                <div id="resultSkeleton">
+
+                    <div class="skeleton skeleton-title"></div>
+
+                    <div class="skeleton skeleton-line"></div>
+
+                    <div class="skeleton skeleton-line short"></div>
+
+                    <div class="skeleton skeleton-badge"></div>
+
+                </div>
+
+                <!-- RESULT -->
+                <div
+                    class="hidden-result"
+                    id="finalResult">
+
+                    <!-- JS -->
+
+                </div>
+
+            </div>
+
+            <!-- ============================================= -->
+            <!-- DISEASE DETAILS -->
+            <!-- ============================================= -->
+
+            <div class="glass-card details-card">
+
+                <div class="card-top">
+
+                    <div>
+
+                        <h2>
+                            Clinical Details
+                        </h2>
+
+                        <p>
+                            AI-supported healthcare insights
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SKELETON -->
+                <div id="detailsSkeleton">
+
+                    <div class="skeleton skeleton-line"></div>
+
+                    <div class="skeleton skeleton-line"></div>
+
+                    <div class="skeleton skeleton-line"></div>
+
+                    <div class="skeleton skeleton-line short"></div>
+
+                </div>
+
+                <!-- DETAILS -->
+                <div
+                    class="hidden-result"
+                    id="detailsBox">
+
+                    <!-- JS -->
+
+                </div>
+
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SAVE BUTTON -->
+            <!-- ============================================= -->
+
+            <button
+                class="save-btn"
+                id="saveBtn"
+                disabled>
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Diagnosis Report
+
+            </button>
+
+        </aside>
+
+    </main>
+
+<script src="js/confirmation.js"></script>
+<script src="./js/logout.js"></script>
+
+</body>
+
+</html>

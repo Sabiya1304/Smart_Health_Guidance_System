@@ -1,0 +1,563 @@
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 50px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+/* ================= HOW IT WORKS ================= */
+
+.how-it-works {
+    background: linear-gradient(to bottom, #ffffff, #f5f9ff);
+}
+
+.steps {
+    display: flex;
+    gap: 30px;
+}
+
+.step-card {
+    flex: 1 1 0;
+    min-width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+}
+
+/* icon stays visual only */
+.step-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+    background: linear-gradient(to bottom, #f8fbff, #ffffff);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.2);
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    background: linear-gradient(135deg, #0d6efd, #198754);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin: 40px 20px;
+    padding: 60px 20px;
+}
+
+/* keep button override only where needed */
+.cta .btn {
+    background: white;
+    color: #0d6efd;
+}
+.cta p {
+    color: white !important;
+}
+.cta .btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ================= RESPONSIVE ONLY (NO DESIGN CHANGE) ================= */
+
+@media (max-width: 992px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= ANIMATION (UNCHANGED) ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.hero-image,
+.step-card,
+.feature-card {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* HOVER */
+
+.logout-btn:hover {
+
+    background: #dc3545;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(220,53,69,0.25);
+}
+
+/* ICON */
+
+.logout-btn i {
+
+    font-size: 15px;
+}
+@media (max-width: 768px) {
+
+    .logout-btn {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+}
+/* =========================================
+NAVBAR LIST FIX
+========================================= */
+
+.nav-links ul {
+
+
+display: flex;
+
+align-items: center;
+
+gap: 20px;
+
+list-style: none;
+
+margin: 0;
+
+padding: 0;
+
+
+}
+
+/* =========================================
+NAVBAR LIST ITEM FIX
+========================================= */
+
+.nav-links ul li {
+
+
+display: flex;
+
+align-items: center;
+
+
+}
+
+/* =========================================
+LOGOUT BUTTON FIX
+========================================= */
+
+.logout-btn {
+
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 8px;
+
+border: none;
+
+outline: none;
+
+background: transparent;
+
+color: #dc3545;
+
+font-size: 15px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition: 0.3s ease;
+
+padding: 10px 16px;
+
+border-radius: 10px;
+
+position: relative;
+
+z-index: 9999;
+
+
+}
+
+.logout-btn:hover {
+
+
+background: rgba(220, 53, 69, 0.1);
+
+
+}
+
+/* =========================================
+NAVBAR MENU
+========================================= */
+
+.nav-links ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+/* =========================================
+NAVBAR LINKS
+========================================= */
+
+.nav-links ul li {
+
+    display: flex;
+
+    align-items: center;
+}
+
+/* =========================================
+LOGOUT BUTTON
+========================================= */
+
+.logout-btn {
+
+
+align-items: center;
+
+justify-content: center;
+
+gap: 8px;
+
+padding: 10px 18px;
+
+border: none;
+
+border-radius: 10px;
+
+background: #dc3545;
+
+color: #ffffff;
+
+font-size: 14px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition: 0.3s ease;
+
+
+}
+
+/* =========================================
+LOGOUT BUTTON HOVER
+========================================= */
+
+.logout-btn:hover {
+
+
+background: #bb2d3b;
+
+transform: translateY(-2px);
+
+
+}
+
+
+/* =========================================
+LOGOUT HOVER
+========================================= */
+
+.logout-btn:hover {
+
+    background: #bb2d3b;
+
+    transform: translateY(-2px);
+}
+/* =========================================
+LOGOUT BUTTON CLICK FIX
+========================================= */
+
+.logout-btn {
+
+
+position: relative;
+
+z-index: 99999;
+
+pointer-events: auto;
+
+
+}
+
+/* =========================================
+NAVBAR FIX
+========================================= */
+
+.navbar {
+
+
+position: relative;
+
+z-index: 9999;
+
+
+}
+
+/* =========================================
+NAV LINKS FIX
+========================================= */ 
+.nav-links {
+position: relative;
+z-index: 9999;
+}
+
+.nav-auth-btn {
+    background: transparent;
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-auth-btn:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+/*====================== HEALTH EDUCATION SECTION ================*/
+.health-education {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+}
+
+.info-block {
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: var(--radius-xl);
+    background: #f9fbff;
+    border: 1px solid var(--border);
+}
+
+.info-block h3 {
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.info-block ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.info-block ul li {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.symptom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.symptom-card {
+    padding: 15px;
+    border-radius: var(--radius-lg);
+    background: white;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.symptom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.warning {
+    border-left: 5px solid #f59e0b;
+    background: #fff8e6;
+}
+
+.emergency {
+    border-left: 5px solid var(--danger);
+    background: #fff1f1;
+}
+
+.note {
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+/* ================= REAL-TIME VALIDATION UI ================= */
+
+.form-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Focus */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
+}
+
+/* VALID STATE */
+.form-group.success input,
+.form-group.success select {
+    border-color: #28a745;
+}
+
+/* ERROR STATE */
+.form-group.error input,
+.form-group.error select {
+    border-color: #dc3545;
+}
+
+/* ERROR TEXT */
+.form-group small.error {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* SUCCESS ICON EFFECT (optional glow) */
+.form-group.success input {
+    box-shadow: 0 0 0 3px rgba(40,167,69,0.15);
+}
+
+/* ================= 2 COLUMN REGISTER FORM LAYOUT ================= */
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* each field inside row */
+.form-row .form-group {
+    flex: 1;
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Health Dashboard</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/dash.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                🩺 Smart Health System
+            </a>
+
+            <div class="nav-right">
+
+                <a href="index.html" class="btn-secondary">
+                Home
+                </a>
+                <a href="symptoms.html"
+                    class="btn-primary">
+                    New Checkup
+                </a>
+
+                <a href="profile.html"
+                    class="btn-secondary">
+                    Profile
+                </a>
+
+                <button id="logoutBtn"
+                    class="btn-secondary">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard-container">
+
+        <!-- HERO SECTION -->
+
+        <section class="hero-section">
+
+            <div class="hero-card">
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        Your Health Helper
+                    </span>
+
+                    <h1>
+                        Hello,
+                        <span id="heroUserName">
+                            User
+                        </span>
+                    </h1>
+
+                    <p id="heroStatusText">
+                        Your latest health summary appears here.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="symptoms.html"
+                            class="btn-primary">
+                            Start New Checkup
+                        </a>
+
+                        <a href="#historySection"
+                            class="btn-secondary">
+                            View History
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="status-card"
+                id="statusCard">
+
+                <span class="status-title">
+                    Current Status
+                </span>
+
+                <h2 id="currentStatusText">
+                    No Checkup Yet
+                </h2>
+
+                <p id="currentStatusMessage">
+                    Complete a symptom check.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- STATISTICS -->
+
+        <section class="stats-section">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-notes-medical"></i>
+
+                <div>
+
+                    <span>Total Checkups</span>
+
+                    <h3 id="totalCheckups">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <div>
+
+                    <span>Last Result</span>
+
+                    <h3 id="lastDisease">
+                        --
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <div>
+
+                    <span>High Risk</span>
+
+                    <h3 id="highSeverityCount">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-calendar"></i>
+
+                <div>
+
+                    <span>Last Checkup</span>
+
+                    <h3 id="lastCheckupDate">
+                        --
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MAIN GRID -->
+
+        <section class="dashboard-grid">
+
+            <div class="left-panel">
+
+                <div class="health-result-card">
+
+                    <div class="result-header">
+
+                        <div>
+
+                            <span>
+                                Latest Health Result
+                            </span>
+
+                            <h2 id="latestDiseaseName">
+                                No Checkup Yet
+                            </h2>
+
+                        </div>
+
+                        <span id="latestSeverityBadge"
+                            class="severity-badge">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <p id="latestPlainMessage"
+                        class="result-message">
+
+                        Start a new checkup.
+
+                    </p>
+
+                    <div class="result-meta">
+
+                        <div>
+
+                            <span>
+                                Checked On
+                            </span>
+
+                            <strong id="latestDate">
+                                --
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Recommended Doctor
+                            </span>
+
+                            <strong id="recommendedDoctor">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="symptoms-box">
+
+                        <h4>
+                            Your Symptoms
+                        </h4>
+
+                        <div id="latestSymptoms">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="right-panel">
+
+                <div class="action-card">
+
+                    <h3>
+                        What You Should Do Now
+                    </h3>
+
+                    <ul id="nextStepsList">
+                    </ul>
+
+                </div>
+
+                <div class="warning-card"
+                    id="warningCard">
+
+                    <h3>
+                        When To See A Doctor
+                    </h3>
+
+                    <p id="warningMessage">
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <h3>
+                        Today's Health Tip
+                    </h3>
+
+                    <p id="dailyHealthTip">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- HISTORY -->
+
+        <section id="historySection"
+            class="history-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Previous Checkups
+                </h2>
+
+                <p>
+                    Only your saved diagnosis records are shown here.
+                </p>
+
+            </div>
+
+            <div id="historyCardGrid"
+                class="history-grid">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= MODAL ================= -->
+
+    <div id="diseaseModal"
+        class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModalBtn"
+                class="close">
+
+                &times;
+
+            </span>
+
+            <h2 id="modalDiseaseName">
+            </h2>
+
+            <p>
+                <strong>Severity:</strong>
+                <span id="modalSeverity">
+                </span>
+            </p>
+
+            <h3>Causes</h3>
+
+            <ul id="modalCauses">
+            </ul>
+
+            <h3>Advice</h3>
+
+            <ul id="modalAdvice">
+            </ul>
+
+            <h3>Medicines</h3>
+
+            <ul id="modalMedicines">
+            </ul>
+
+            <p>
+                <strong>Recommended Doctor:</strong>
+                <span id="modalDoctor">
+                </span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="./js/dash.js"></script>
+</body>
+
+</html>

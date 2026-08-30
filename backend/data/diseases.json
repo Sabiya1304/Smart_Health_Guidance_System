@@ -1,0 +1,223 @@
+[
+  {
+    "disease": "Flu",
+    "symptoms": [
+      "fever",
+      "cough",
+      "cold",
+      "body pain",
+      "fatigue",
+      "chills"
+    ]
+  },
+
+  {
+    "disease": "Common Cold",
+    "symptoms": [
+      "sneezing",
+      "runny nose",
+      "mild cough",
+      "sore throat",
+      "nasal congestion"
+    ]
+  },
+
+  {
+    "disease": "Migraine",
+    "symptoms": [
+      "headache",
+      "nausea",
+      "vomiting",
+      "light sensitivity",
+      "sound sensitivity"
+    ]
+  },
+
+  {
+    "disease": "Food Poisoning",
+    "symptoms": [
+      "vomiting",
+      "diarrhea",
+      "stomach pain",
+      "weakness",
+      "nausea"
+    ]
+  },
+
+  {
+    "disease": "Malaria",
+    "symptoms": [
+      "high fever",
+      "chills",
+      "sweating",
+      "headache",
+      "fatigue"
+    ]
+  },
+
+  {
+    "disease": "Dengue",
+    "symptoms": [
+      "high fever",
+      "joint pain",
+      "rash",
+      "eye pain",
+      "headache",
+      "body pain"
+    ]
+  },
+
+  {
+    "disease": "Typhoid",
+    "symptoms": [
+      "continuous fever",
+      "weakness",
+      "stomach pain",
+      "loss of appetite",
+      "fatigue"
+    ]
+  },
+
+  {
+    "disease": "Acidity",
+    "symptoms": [
+      "chest burning",
+      "bloating",
+      "burping",
+      "stomach discomfort",
+      "acid reflux"
+    ]
+  },
+
+  {
+    "disease": "Allergy",
+    "symptoms": [
+      "sneezing",
+      "itchy eyes",
+      "runny nose",
+      "rash",
+      "skin irritation"
+    ]
+  },
+
+  {
+    "disease": "Dehydration",
+    "symptoms": [
+      "thirst",
+      "dry mouth",
+      "weakness",
+      "dizziness",
+      "fatigue"
+    ]
+  },
+
+  {
+    "disease": "Asthma",
+    "symptoms": [
+      "shortness of breath",
+      "chest tightness",
+      "cough",
+      "wheezing",
+      "breathing difficulty"
+    ]
+  },
+
+  {
+    "disease": "Bronchitis",
+    "symptoms": [
+      "persistent cough",
+      "mucus",
+      "fatigue",
+      "chest discomfort",
+      "wheezing"
+    ]
+  },
+
+  {
+    "disease": "Diabetes",
+    "symptoms": [
+      "frequent urination",
+      "increased thirst",
+      "fatigue",
+      "blurred vision",
+      "weight loss"
+    ]
+  },
+
+  {
+    "disease": "Hypertension",
+    "symptoms": [
+      "headache",
+      "dizziness",
+      "chest pain",
+      "shortness of breath",
+      "stress"
+    ]
+  },
+
+  {
+    "disease": "Anemia",
+    "symptoms": [
+      "fatigue",
+      "pale skin",
+      "dizziness",
+      "shortness of breath",
+      "weakness"
+    ]
+  },
+
+  {
+    "disease": "Appendicitis",
+    "symptoms": [
+      "lower right abdominal pain",
+      "nausea",
+      "vomiting",
+      "fever",
+      "loss of appetite"
+    ]
+  },
+
+  {
+    "disease": "Urinary Tract Infection",
+    "symptoms": [
+      "burning urination",
+      "frequent urination",
+      "pelvic pain",
+      "cloudy urine",
+      "pain during urination"
+    ]
+  },
+
+  {
+    "disease": "Kidney Stones",
+    "symptoms": [
+      "severe back pain",
+      "blood in urine",
+      "nausea",
+      "vomiting",
+      "pain during urination"
+    ]
+  },
+
+  {
+    "disease": "Depression",
+    "symptoms": [
+      "sadness",
+      "loss of interest",
+      "fatigue",
+      "sleep problems",
+      "low energy"
+    ]
+  },
+
+  {
+    "disease": "Anxiety",
+    "symptoms": [
+      "restlessness",
+      "rapid heartbeat",
+      "sweating",
+      "nervousness",
+      "panic"
+    ]
+  }
+]

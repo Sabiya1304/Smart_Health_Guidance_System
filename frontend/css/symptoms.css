@@ -1,0 +1,234 @@
+/* ================= MAIN LAYOUT ================= */
+.symptom-main {
+    padding: var(--xl) 0;
+}
+
+.symptom-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--xl);
+    align-items: start;
+}
+
+/* ================= LEFT SIDE: SEARCH & GRID ================= */
+.symptom-section {
+    flex: 2;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.symptom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* ================= SYMPTOM CARDS ================= */
+.symptom-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+    padding: 18px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.symptom-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(13,110,253,0.10), transparent 70%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.symptom-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(13,110,253,0.25);
+    box-shadow: var(--shadow-hover);
+}
+
+.symptom-card:hover::before {
+    opacity: 1;
+}
+
+.symptom-card.active {
+    background: rgba(13,110,253,0.08);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    box-shadow: 0 14px 30px rgba(13,110,253,0.18);
+    transform: translateY(-2px);
+}   
+
+.symptom-card.active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+}
+
+/* ================= RIGHT PANEL ================= */
+.selected-panel {
+    flex: 1;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    padding: var(--lg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 90px;
+}
+
+.selected-panel:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* NEW: Scrollbar behavior for the selected list */
+.selected-list {
+    min-height: 180px;
+    max-height: 300px; /* NEW: Prevents infinite growth */
+    overflow-y: auto; /* NEW: Makes it scrollable if too many items */
+    margin: 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 8px;
+    padding-right: 5px;
+}
+
+/* NEW: Custom thin scrollbar for the selected list */
+.selected-list::-webkit-scrollbar {
+    width: 6px;
+}
+.selected-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.selected-list::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.empty-text {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ================= SELECTED SYMPTOM CHIP ================= */
+.selected-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    margin: 6px 6px 0 0;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(135deg, rgba(13,110,253,0.10), rgba(92,164,255,0.12));
+    border: 1px solid rgba(13,110,253,0.15);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(13,110,253,0.08);
+    transition: var(--transition);
+}
+
+.selected-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(13,110,253,0.15);
+}
+
+/* NEW: Styling for the X (remove) button inside the chip */
+.remove-symptom-btn {
+    background: transparent;
+    border: none;
+    color: var(--danger);
+    font-size: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+    line-height: 1;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.remove-symptom-btn:hover {
+    opacity: 1;
+}
+
+/* ================= ACTIONS ================= */
+.panel-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.panel-actions .btn {
+    width: 100%;
+    min-height: 52px;
+    border-radius: var(--radius-lg);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .symptom-layout {
+        grid-template-columns: 1fr;
+    }
+    .selected-panel {
+        position: static;
+    }
+    .symptom-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .symptom-grid {
+        grid-template-columns: 1fr;
+    }
+}

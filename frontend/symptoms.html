@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Symptom Checker | Smart Health System</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/symptoms.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            🩺 SmartHealth
+        </a>
+
+        <nav class="nav-links" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="dash.html" class="active">Dashboard</a>
+                </li>
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="nav-action">
+            <button id="logoutBtn" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+            <a href="symptoms.html" class="btn primary-btn" id="startCheckBtn">
+                Start Check
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+<section class="symptom-hero">
+    <div class="container">
+        <div class="symptom-hero-content">
+            <p class="hero-badge">Smart Symptom Analysis</p>
+            <h1>Select Your Symptoms</h1>
+            <p>Choose the symptoms you are experiencing to begin AI-powered disease analysis and health verification.</p>
+        </div>
+    </div>
+</section>
+
+<main class="symptom-main">
+    <div class="container symptom-layout">
+
+        <section class="symptom-section">
+            <h2 class="section-title">Select Your Symptoms</h2>
+
+            <div class="search-box">
+                <input 
+                    type="text"
+                    placeholder="Search symptoms (e.g. fever, headache)"
+                    class="search-input"
+                    id="searchInput"
+                >
+            </div>
+
+            <div class="symptom-grid" id="symptomGrid">
+                </div>
+        </section>
+
+        <aside class="selected-panel">
+            <h3>Selected Symptoms</h3>
+
+            <div class="selected-list" id="selectedList">
+                <p class="empty-text">No symptoms selected</p>
+            </div>
+
+            <div class="panel-actions">
+                <button class="btn secondary-btn" id="clearBtn">
+                    Clear All
+                </button>
+                <button class="btn primary-btn" id="analyzeBtn" disabled>
+                    Analyze Symptoms &rarr;
+                </button>
+            </div>
+        </aside>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Smart Health System | MCA Project</p>
+    </div>
+</footer>
+
+<script src="js/symptoms.js"></script>
+<script src="./js/logout.js"></script>
+
+</body>
+</html>
